@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 
 
 void displayHangman(int wrongGuesses){
@@ -37,51 +39,57 @@ void displayHangman(int wrongGuesses){
         break;
 
     case 3:
-        cout << "   _______     \n";
-        cout << "  |       |    \n";
-        cout << "  |       O    \n";
-        cout << "  |      /|    \n";
-        cout << "  |            \n";
-        cout << "  |            \n";
-        cout << " _|_           \n\n";
+        std::cout << "   _______     \n";
+        std::cout << "  |       |    \n";
+        std::cout << "  |       O    \n";
+        std::cout << "  |      /|    \n";
+        std:: cout << "  |            \n";
+        std::cout << "  |            \n";
+        std::cout << " _|_           \n\n";
         break;
 
     case 4:
-        cout << "   _______     \n";
-        cout << "  |       |    \n";
-        cout << "  |       O    \n";
-        cout << "  |      /|\\  \n";
-        cout << "  |            \n";
-        cout << "  |            \n";
-        cout << " _|_           \n\n";
+        std::cout << "   _______     \n";
+        std::cout << "  |       |    \n";
+        std::cout << "  |       O    \n";
+        std::cout << "  |      /|\\  \n";
+        std::cout << "  |            \n";
+        std::cout << "  |            \n";
+        std::cout << " _|_           \n\n";
         break;
 
     case 5:
-        cout << "   _______     \n";
-        cout << "  |       |    \n";
-        cout << "  |       O    \n";
-        cout << "  |      /|\\  \n";
-        cout << "  |      /     \n";
-        cout << "  |            \n";
-        cout << " _|_           \n\n";
+        std::cout << "   _______     \n";
+        std::cout << "  |       |    \n";
+        std::cout << "  |       O    \n";
+        std::cout << "  |      /|\\  \n";
+        std::cout << "  |      /     \n";
+        std::cout << "  |            \n";
+        std::cout << " _|_           \n\n";
         break;
 
     case 6:
-        cout << "   _______     ";
-        cout << "  |       |    ";
-        cout << "  |       O    ";
-        cout << "  |      /|\\  ";
-        cout << "  |      / \\  ";
-        cout << "  |            ";
-        cout << " _|_           ";
+        std::cout << "   _______     ";
+        std::cout << "  |       |    ";
+        std::cout << "  |       O    ";
+        std::cout << "  |      /|\\  ";
+        std::cout << "  |      / \\  ";
+        std::cout << "  |            ";
+        std::cout << " _|_           ";
         break;
 
     
-    default:
-        break;
     }
 }
 
+void displayWord(const string& word, const vector<bool>& guessed);
+    for(size_t i = 0; i < word.length(); ++i){
+        if(guessed[i]){
+            std::cout << word[i] << " ";
+        } else{
+            cout << "_";
+        }
+    }
 int main() {
     const std::vector<std::string> wordList = {"Venustraphobia", "Chromophobia", "Apple", "River", "Feather", "Mirror", "Spark", "Clock", "Sapphire", "Phoenix"};
     int attempts = 10;
