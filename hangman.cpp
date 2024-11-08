@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 
-// displays the hangman figure
+// function to display the hangman figure
 void displayHangman(int wrongGuesses) {
     switch (wrongGuesses) {
     case 0:
