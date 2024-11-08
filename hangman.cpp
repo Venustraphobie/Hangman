@@ -83,7 +83,7 @@ void displayWord(const std::string& word, const std::vector<bool>& guessed) {
 }
 
 int main() {
-    const std::vector<std::string> wordList = {"Venustraphobia", "Chromophobia", "Apple", "River", "Feather", "Mirror", "Spark", "Clock", "Sapphire", "Phoenix"};
+    const std::vector<std::string> wordList = {"Ant", "Hawk", "Tiger", "Sigma", "Pig", "Rabbit", "River", "Sugar", "Goose", "Fish", "Turkey", "Toad", "Snake", "Zebra", "Iron", "Dirt", "Gold", "School", "Crow", "Spider"};
     srand(time(0));
     std::string word = wordList[rand() % wordList.size()];  // Selects a word from the list
     std::vector<bool> guessed(word.length(), false);
